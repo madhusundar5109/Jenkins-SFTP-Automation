@@ -91,11 +91,11 @@ The solution is built on three independently operating layers:
 
 | Component | Version | Notes |
 |---|---|---|
-| Jenkins | 2.555.1+ | Running on port `8081` |
-| Oracle Linux / RHEL | 7+ | Agent node OS |
+| Jenkins | latest | Running on port `8081` |
+| Oracle Linux / RHEL | any | Agent node OS |
 | `inotify-tools` | Any | Provides `inotifywait` |
 | `sshpass` | Any | Required for password-based SCP |
-| `curl` | 7.x+ | For Jenkins REST API trigger |
+| `curl` | Any | For Jenkins REST API trigger |
 | Jenkins API Token | — | User > Configure > API Token |
 | Jenkins Credential | `jenkins-sftp-key` | Username + Password type |
 
@@ -314,4 +314,4 @@ ssh client@<remote_server> 'ls -la /home/remote/test-sftp-server/'
 
 
 
-*Built and maintained by S. Madhu King — 
+*Built and maintained by S. Madhu
