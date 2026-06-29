@@ -194,7 +194,7 @@ After=network.target
 ExecStart=/opt/file-watcher/watch.sh
 Restart=always
 RestartSec=5
-User=oracle
+User=client
 StandardOutput=journal
 StandardError=journal
 
@@ -256,7 +256,7 @@ Create a new **Pipeline** job named `Project-SFTP-Test` in Jenkins and use the `
 Jenkins parameterized jobs require **one manual build** before the parameter is registered. Do this once:
 
 ```
-Jenkins UI → Project-SFTP-Test-2 → Build with Parameters
+Jenkins UI → Project-SFTP-Test → Build with Parameters
 CHANGED_FILE: /tmp/bootstrap
 → Click Build
 ```
@@ -302,7 +302,7 @@ curl -v -X POST \
 
 ```bash
 # Drop any file into the source folder
-cp sample.pdf /home/oracle/sftp-test-client/
+cp sample.pdf /home/client/sftp-test-client/
 
 
 # Verify the file arrived on the remote server
